@@ -1,2 +1,10 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+
+
+<h2>Title:</h2>
+<p><%= @book.title %></p>
+<h2>Body:</h2>
+<p><%= @book.body %></p>
+
+<%= link_to 'Edit' , "/books/edit/#{@book.id}" %>
+<%= link_to 'Back' , "/books/index" %>
