@@ -1,10 +1,7 @@
-<%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
-
-
 <h2>Title:</h2>
 <p><%= @book.title %></p>
 <h2>Body:</h2>
 <p><%= @book.body %></p>
 
-<%= link_to 'Edit' , "/books/edit/#{@book.id}" %>
+<%= link_to "Edit",  edit_book_path(@book) %>
 <%= link_to 'Back' , "/books/index" %>
